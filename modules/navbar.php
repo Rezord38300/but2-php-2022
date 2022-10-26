@@ -19,6 +19,12 @@
       <li class="nav-item">
           <a class="nav-link" href="/inscription.php">Inscription</a>
         </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/login.php">Login</a>
+        </li>
+      <li class="nav-item">
+          <?php verifSession();?>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/blog.php" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
           <div class="dropdown-menu" aria-labelledby="dropdown07">
@@ -30,4 +36,13 @@
       </ul>
     </div>
   </div>
+  <?php 
+  function verifSession(){
+    if (isset($_SESSION['user']) == false) {
+      echo "Non connecté";
+  }else{
+    echo $_SESSION['user'];
+  }
+  }
+  ?>
 </nav>

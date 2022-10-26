@@ -4,14 +4,14 @@
   include 'modules/head.php';
   ?>
   <body class="text-center">
-    <form class="form-signin">
+    <form action='/traitementLogin.php' class="form-signin" method="post">
       <h1 class="h3 mb-3 font-weight-normal">Formulaire de connexion</h1>
 
       <label for="inputEmail">Adresse Email</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <input type="email" name="Login" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
 
       <label for="inputPassword">Mot de passe</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <input type="password" name="mdp" id="inputPassword" class="form-control" placeholder="Password" required>
 
       <div class="checkbox mb-3">
         <label>

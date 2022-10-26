@@ -32,11 +32,22 @@
 
     <p><?php echo $_POST['photo'] ?></p>
 
+<?php
+    move_uploaded_file(
+        $_FILES['photo']['tmp_name'], __DIR__.'photo.TMP.png'
+    );
+
+    function traitementPhoto(){
+        echo '<img src="/photoTMP.png">';
+    }
+?>
     <?php
     /*foreach ($_POST as $key => $value) {
         echo $value . "<br>";
     }
     */ ?>
+
+    <?php /*fonction header pour envoyer en en-tête de page*/?>
 </body>
 
 </html>
